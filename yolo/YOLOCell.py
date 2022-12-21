@@ -36,12 +36,12 @@ class ORTSessions:
         if measure < 64:
             return ort.InferenceSession(str(project_root / MODEL_PATH_32)), 32
         if measure < 128:
-            return ort.InferenceSession(str(project_root / MODEL_PATH_64)), 64
+            return ort.InferenceSession(str(project_root / MODEL_PATH_32)), 32
         if measure < 256:
-            return ort.InferenceSession(str(project_root / MODEL_PATH_128)), 128
+            return ort.InferenceSession(str(project_root / MODEL_PATH_64)), 64
         if measure < 512:
-            return ort.InferenceSession(str(project_root / MODEL_PATH_256)), 256
-        return ort.InferenceSession(str(project_root / MODEL_PATH_512)), 512
+            return ort.InferenceSession(str(project_root / MODEL_PATH_128)), 128
+        return ort.InferenceSession(str(project_root / MODEL_PATH_256)), 256
 
 
 class YOLOData:

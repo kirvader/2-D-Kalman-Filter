@@ -192,7 +192,7 @@ def main():
     WorkerController.init()
     ORTSessions.init()
 
-    KF = TimeDependentKalmanFilter(0.01, 0.01, 0.1, 0.01, 0.01)
+    KF = TimeDependentKalmanFilter(1, 1, 0.01, 0.01, 0.01)
     thread = None
 
     while True:
